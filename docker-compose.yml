@@ -1,0 +1,18 @@
+version: "3.2"
+services:
+  laravel-study-test:
+    image: pauly/laravel-study-test:latest
+    env_file:
+      - ./build/env/laravel-study-test.env
+    networks:
+      - net
+    ports:
+      - '80:80'
+    restart: always
+
+volumes:
+  esdata:
+
+networks:
+  net:
+
